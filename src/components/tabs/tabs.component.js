@@ -23,16 +23,18 @@ class Links extends Component {
             <h1>${name}</h1>
               <div class="links-wrapper">
               ${links
-              .map(
-                (link) => `
+                .map(
+                  (link) => `
                   <div class="link-info">
                     <a href="${link.url}" target="_blank">
                       ${Links.getIcon(link)}
-                      ${link.name ? `<p class="link-name">${link.name}</p>` : ""}
+                      ${
+                        link.name ? `<p class="link-name">${link.name}</p>` : ""
+                      }
                     </a>
                 </div>`
-              )
-              .join("")}
+                )
+                .join("")}
             </div>
           </li>`;
         })
@@ -47,14 +49,17 @@ class Category extends Component {
   }
 
   static getBackgroundStyle(url) {
-    return `style="background-image: url(${url}); background-repeat: no-repeat;background-size: contain;"`;
+    // return `style="background-image: url(${url}); background-repeat: no-repeat;background-size: contain;"`;
+    return;
   }
 
   static getAll(tabs) {
     return `
       ${tabs
         .map(({ name, background_url }, index) => {
-          return `<ul class="${name}" ${Category.getBackgroundStyle(background_url)} ${index == 0 ? "active" : ""}>
+          return `<ul class="${name}" ${Category.getBackgroundStyle(
+            background_url
+          )} ${index == 0 ? "active" : ""}>
             <div class="banner"></div>
             <div class="links">${Links.getAll(name, tabs)}</div>
           </ul>`;
@@ -104,8 +109,8 @@ class Tabs extends Component {
       #panels {
           border-radius: 5px 0 0 5px;
           width: 90%;
-          max-width: 1200px;
-          height: 450px;
+          max-width: 1000px;
+          height: 500px;
           right: 0;
           left: 0;
           top: 0;
@@ -166,7 +171,7 @@ class Tabs extends Component {
 
       .categories .links {
           right: 0;
-          width: 70%;
+          width: 100%;
           height: 100%;
           background: #1e1e2e;
           padding: 5%;
@@ -208,25 +213,26 @@ class Tabs extends Component {
           position: absolute;
           display: flex;
           text-transform: uppercase;
-          overflow-wrap: break-word;
-          width: 25px;
-          height: 250px;
-          padding: 1em;
-          margin: auto;
+          // overflow-wrap: break-word;
+          // width: 25px;
+          // height: 250px;
+          // padding: 1em;
+          // margin: auto;
           border-radius: 5px;
-          box-shadow: inset 0 0 0 2px var(--flavour);
+          // box-shadow: inset 0 0 0 2px var(--flavour);
           left: calc(15% - 42.5px);
           bottom: 0;
           top: 0;
-          background: linear-gradient(to top, rgb(50 48 47 / 90%), transparent);
+          // background: linear-gradient(to top, rgb(50 48 47 / 90%), transparent);
           color: var(--flavour);
           letter-spacing: 1px;
           font: 500 30px 'Nunito', sans-serif;
+          opacity: 0;
           text-align: center;
           flex-wrap: wrap;
           word-break: break-all;
           align-items: center;
-          backdrop-filter: blur(3px);
+          //backdrop-filter: blur(3px);
       }
 
       .categories .links li:not(:last-child) {

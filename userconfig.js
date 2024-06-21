@@ -3,29 +3,310 @@ let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
 const default_config = {
   overrideStorage: true,
   temperature: {
-    location: "London",
-    scale: "C",
+    location: "New York",
+    scale: "F",
   },
   clock: {
     format: "h:i p",
     iconColor: "#f38ba8",
   },
   disabled: [],
-  fastlink: "https://app.raindrop.io",
+  fastlink: "https://github.com/sung8",
   openLastVisitedTab: true,
   tabs: [
     {
-      name: "myself",
-      background_url: "src/img/banners/cbg-9.gif",
+      name: "1",
+      background_url: "",
       categories: [
         {
-          name: "bookmarks",
+          name: "ai-tools",
           links: [
             {
-              name: "raindrop",
-              url: "https://app.raindrop.io",
-              icon: "droplet-bolt",
+              name: "chatgpt",
+              url: "https://chatgpt.com/",
+              icon: "brand-openai",
+              icon_color: "#F2F6DF",
+            },
+            {
+              name: "claude",
+              url: "https://claude.ai",
+              icon: "asterisk",
+              icon_color: "#EDEBE1",
+            },
+            {
+              name: "perplexity",
+              url: "https://www.perplexity.ai/bin",
+              icon: "bulb",
+              icon_color: "#1F6974",
+            },
+            {
+              name: "gemini",
+              url: "https://gemini.google.com/app",
+              icon: "sparkles",
+              icon_color: "#3892DA",
+            },
+          ],
+        },
+        {
+          name: "coding-interview-prep",
+          links: [
+            {
+              name: "neetcode",
+              url: "https://neetcode.io/practice",
+              icon: "rocket",
+              icon_color: "#B3132D",
+            },
+            {
+              name: "alphabet150",
+              url: "https://alphabet150.com/",
+              icon: "variable",
+              icon_color: "#99A3B0",
+            },
+            {
+              name: "big-o",
+              url: "https://www.bigocheatsheet.com/",
+              icon: "",
+              icon_color: "",
+            },
+            {
+              name: "graph",
+              url: "https://workshape.github.io/visual-graph-algorithms/",
+              icon: "",
+              icon_color: "",
+            },
+            {
+              name: "visualgo",
+              url: "https://visualgo.net/en",
+              icon: "",
+              icon_color: "",
+            },
+            {
+              name: "usfca",
+              url: "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
+              icon: "",
+              icon_color: "",
+            },
+            {
+              name: "lc/main",
+              url: "https://leetcode.com/problemset/",
+              icon: "code-plus",
+              icon_color: "#fab387",
+            },
+            {
+              name: "lc/150",
+              url: "https://leetcode.com/studyplan/top-interview-150/",
+              icon: "target-arrow",
+              icon_color: "#fab387",
+            },
+            {
+              name: "lc/75",
+              url: "https://leetcode.com/studyplan/leetcode-75/",
+              icon: "stairs-up",
+              icon_color: "#fab387",
+            },
+            {
+              name: "hr/kit",
+              url: "https://www.hackerrank.com/interview/interview-preparation-kit",
+              icon: "hexagon-letter-h",
+              icon_color: "#068932",
+            },
+            {
+              name: "hr/algos",
+              url: "https://www.hackerrank.com/domains/algorithms",
+              icon: "hexagons",
+              icon_color: "#068932",
+            },
+            {
+              name: "sql",
+              url: "https://platform.stratascratch.com/coding?code_type=1",
+              icon: "scribble",
+              icon_color: "#00A699",
+            },
+          ],
+        },
+        {
+          name: "job-boards",
+          links: [
+            {
+              name: "linkedin",
+              url: "https://www.linkedin.com/jobs/search?keywords=Software%20Engineer&location=United%20States",
+              icon: "brand-linkedin",
+              icon_color: "#0A66C2",
+            },
+            {
+              name: "indeed",
+              url: "https://www.indeed.com/jobs?q=software+engineer&l=United+States",
+              icon: "info-square",
+              icon_color: "#1046A1",
+            },
+            {
+              name: "f500",
+              url: "https://www.50pros.com/fortune500",
+              icon: "currency-forint",
+              icon_color: "#EE4B2B",
+            },
+            {
+              name: "nerdwerk",
+              url: "https://nerdwerk.io/",
+              icon: "mood-nerd",
+              icon_color: "#89b4fa",
+            },
+            {
+              name: "simplify/jobs",
+              url: "https://github.com/SimplifyJobs/New-Grad-Positions",
+              icon: "braces",
+              icon_color: "#89b4fa",
+            },
+            {
+              name: "simplify/internships",
+              url: "https://github.com/SimplifyJobs/Summer2025-Internships",
+              icon: "braces",
+              icon_color: "#89b4fa",
+            },
+            {
+              name: "newgrad24",
+              url: "https://github.com/ReaVNaiL/New-Grad-2024",
+              icon: "braces",
+              icon_color: "#89b4fa",
+            },
+            {
+              name: "in1",
+              url: "https://github.com/AlanChen4/Summer-2024-SWE-Internships",
+              icon: "braces",
+              icon_color: "#89b4fa",
+            },
+            {
+              name: "in2",
+              url: "https://github.com/etkhdaniel/Summer2024-Internships",
+              icon: "braces",
+              icon_color: "#89b4fa",
+            },
+            {
+              name: "res",
+              url: "https://github.com/sung8/resume-latex",
+              icon: "script",
+              icon_color: "#89b4fa",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "2",
+      background_url: "",
+      categories: [
+        {
+          name: "data",
+          links: [
+            {
+              name: "flowingdata",
+              url: "https://web.telegram.org",
+              icon: "chart-dots-2",
               icon_color: "#a6e3a1",
+            },
+            {
+              name: "datatau",
+              url: "http://www.datatau.com/ ",
+              icon: "article",
+              icon_color: "#00B4B4",
+            },
+            {
+              name: "/r/dataengineering",
+              url: "https://www.reddit.com/r/dataengineering/",
+              icon: "",
+              icon_color: "#f38ba8",
+            },
+            {
+              name: "/r/datascience",
+              url: "https://www.reddit.com/r/datascience/",
+              icon: "",
+              icon_color: "#f38ba8",
+            },
+            {
+              name: "/t/dataengineering",
+              url: "https://www.reddit.com/t/data_engineering/",
+              icon: "",
+              icon_color: "#f38ba8",
+            },
+            {
+              name: "dev.to",
+              url: "https://dev.to/t/dataengineering",
+            },
+            {
+              name: "de/wiki",
+              url: "https://dataengineering.wiki/Index",
+              icon: "database-cog",
+              icon_color: "#9E9E9E",
+            },
+            {
+              name: "practicepython",
+              url: "https://www.practicepython.org/",
+              icon: "",
+              icon_color: "",
+            },
+            {
+              name: "datacamp",
+              url: "https://www.datacamp.com/",
+              icon: "",
+              icon_color: "",
+            },
+          ],
+        },
+        {
+          name: "vim",
+          links: [
+            {
+              name: "genius",
+              url: "http://www.vimgenius.com/",
+              icon: "pencil-question",
+              icon_color: "#5BD0B6",
+            },
+            {
+              name: "cheatsheet",
+              url: "https://vim.rtorr.com/",
+              icon: "square",
+              icon_color: "#BD5353",
+            },
+            {
+              name: "hero",
+              url: "https://www.vim-hero.com/",
+              icon: "switch-vertical",
+              icon_color: "#FD8B8B",
+            },
+            {
+              name: "open",
+              url: "https://www.openvim.com/",
+              icon: "brand-open-source",
+              icon_color: "#800080",
+            },
+          ],
+        },
+        {
+          name: "other",
+          links: [
+            {
+              name: "pixiv",
+              url: "https://www.pixiv.net/en/users/9127068",
+              icon: "photo",
+              icon_color: "#0096FA",
+            },
+            {
+              name: "hacker news",
+              url: "https://news.ycombinator.com/",
+              icon: "",
+              icon_color: "",
+            },
+            {
+              name: "anilist",
+              url: "https://anilist.co/home",
+              icon: "",
+              icon_color: "#a6e3a1",
+            },
+            {
+              name: "youtube",
+              url: "https://www.youtube.com",
+              icon: "brand-youtube",
+              icon_color: "#FF0000",
             },
             {
               name: "musicForProgramming();",
@@ -33,237 +314,35 @@ const default_config = {
               icon: "binary-tree",
               icon_color: "#fab387",
             },
-          ],
-        },
-        {
-          name: "workspace",
-          links: [
             {
-              name: "gmail",
-              url: "https://mail.google.com",
-              icon: "brand-gmail",
-              icon_color: "#a6e3a1",
+              name: "/r/unixporn",
+              url: "https://www.reddit.com/r/unixporn/",
+              icon: "",
+              icon_color: "#6EE8F6",
             },
             {
-              name: "calendar",
-              url: "https://calendar.google.com",
-              icon: "calendar-filled",
-              icon_color: "#fab387",
-            },
-            {
-              name: "sheets",
-              url: "https://docs.google.com/spreadsheets",
-              icon: "table",
-              icon_color: "#f38ba8",
-            },
-            {
-              name: "drive",
-              url: "https://drive.google.com/drive/home",
-              icon: "brand-google-drive",
-              icon_color: "#89b4fa",
-            },
-          ],
-        },
-        {
-          name: "media",
-          links: [
-            {
-              name: "уп",
-              url: "https://www.pravda.com.ua",
-              icon: "news",
-              icon_color: "#a6e3a1",
-            },
-            {
-              name: "mil.in.ua",
-              url: "https://mil.in.ua",
-              icon: "badge-filled",
-              icon_color: "#fab387",
-            },
-            {
-              name: "куток",
-              url: "https://kutok.io",
-              icon: "border-radius",
-              icon_color: "#f38ba8",
-            },
-            {
-              name: "ґрунт",
-              url: "https://grnt.media",
-              icon: "eye-bolt",
+              name: "/r/UsabilityPorn",
+              url: "https://www.reddit.com/r/UsabilityPorn/",
+              icon: "",
               icon_color: "#89b4fa",
             },
             {
-              name: "village",
-              url: "https://www.village.com.ua",
-              icon: "home-2",
-              icon_color: "#cba6f7",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "dev",
-      background_url: "src/img/banners/cbg-8.gif",
-      categories: [
-        {
-          name: "resources",
-          links: [
-            {
-              name: "github",
-              url: "https://github.com",
-              icon: "brand-github",
-              icon_color: "#a6e3a1",
+              name: "substack",
+              url: "https://substack.com/home",
+              icon: "stack-2",
+              icon_color: "#E65C16",
             },
             {
-              name: "neptune",
-              url: "https://ui.neptune.ai",
-              icon: "circle-triangle",
-              icon_color: "#fab387",
+              name: "bestvaluegpu",
+              url: "https://bestvaluegpu.com/",
+              icon: "shopping-cart-dollar",
+              icon_color: "#068932",
             },
             {
-              name: "wakatime",
-              url: "https://wakatime.com/dashboard",
-              icon: "24-hours",
-              icon_color: "#f38ba8",
-            },
-          ],
-        },
-        {
-          name: "challenges",
-          links: [
-            {
-              name: "kaggle",
-              url: "https://www.kaggle.com/volodymyrpivoshenko",
-              icon: "brain",
-              icon_color: "#a6e3a1",
-            },
-            {
-              name: "leetcode",
-              url: "https://leetcode.com",
-              icon: "code-plus",
-              icon_color: "#fab387",
-            },
-            {
-              name: "stackoverflow",
-              url: "https://stackoverflow.com",
-              icon: "brand-stackoverflow",
-              icon_color: "#f38ba8",
-            },
-          ],
-        },
-        {
-          name: "blogs",
-          links: [
-            {
-              name: "dou",
-              url: "https://dou.ua",
-              icon: "brand-prisma",
-              icon_color: "#a6e3a1",
-            },
-            {
-              name: "hackernews",
-              url: "https://news.ycombinator.com",
-              icon: "brand-redhat",
-              icon_color: "#fab387",
-            },
-            {
-              name: "uber research",
-              url: "https://eng.uber.com/category/articles",
-              icon: "brand-uber",
-              icon_color: "#f38ba8",
-            },
-            {
-              name: "google research",
-              url: "https://blog.research.google",
-              icon: "hexagon-letter-g",
-              icon_color: "#89b4fa",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "chi ll",
-      background_url: "src/img/banners/cbg-10.gif",
-      categories: [
-        {
-          name: "social medias",
-          links: [
-            {
-              name: "telegram",
-              url: "https://web.telegram.org",
-              icon: "brand-telegram",
-              icon_color: "#a6e3a1",
-            },
-            {
-              name: "facebook",
-              url: "https://www.facebook.com",
-              icon: "brand-facebook",
-              icon_color: "#fab387",
-            },
-            {
-              name: "reddit",
-              url: "https://www.reddit.com/r/unixporn",
-              icon: "brand-reddit",
-              icon_color: "#f38ba8",
-            },
-          ],
-        },
-        {
-          name: "games",
-          links: [
-            {
-              name: "GG",
-              url: "https://ggapp.io/pivoshenko",
-              icon: "device-gamepad",
-              icon_color: "#a6e3a1",
-            },
-            {
-              name: "steam",
-              url: "https://store.steampowered.com",
-              icon: "brand-steam",
-              icon_color: "#fab387",
-            },
-            {
-              name: "epicgames",
-              url: "https://store.epicgames.com",
-              icon: "brand-fortnite",
-              icon_color: "#f38ba8",
-            },
-            {
-              name: "nintendo",
-              url: "https://store.nintendo.co.uk",
-              icon: "device-nintendo",
-              icon_color: "#89b4fa",
-            },
-          ],
-        },
-        {
-          name: "video",
-          links: [
-            {
-              name: "anilist",
-              url: "https://anilist.co/home",
-              icon: "brand-funimation",
-              icon_color: "#a6e3a1",
-            },
-            {
-              name: "youtube",
-              url: "https://www.youtube.com",
-              icon: "brand-youtube",
-              icon_color: "#fab387",
-            },
-            {
-              name: "patreon",
-              url: "https://www.patreon.com",
-              icon: "brand-patreon",
-              icon_color: "#f38ba8",
-            },
-            {
-              name: "kyivstar",
-              url: "https://tv.kyivstar.ua",
-              icon: "star-filled",
-              icon_color: "#89b4fa",
+              name: "pcprice",
+              url: "https://pcpricetracker.in/",
+              icon: "",
+              icon_color: "",
             },
           ],
         },
